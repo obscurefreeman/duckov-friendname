@@ -1,0 +1,49 @@
+﻿using Duckov.UI;
+using Duckov.Utilities;
+using ItemStatsSystem;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace DisplayItemValue
+{
+
+    public class ModBehaviour : Duckov.Modding.ModBehaviour
+    {
+        TextMeshProUGUI _text = null;
+        TextMeshProUGUI Text
+        {
+            get
+            {
+                if (_text == null)
+                {
+                    _text = Instantiate(GameplayDataSettings.UIStyle.TemplateTextUGUI);
+                }
+                return _text;
+            }
+        }
+        void Awake()
+        {
+            Debug.Log("DisplayItemValue Loaded!!!");
+        }
+        void OnDestroy()
+        {
+            if (_text != null)
+                Destroy(_text);
+        }
+        void OnEnable()
+        {
+            ItemHoveringUI.onSetupItem += OnSetupItemHoveringUI;
+        }
+        void OnDisable()
+        {
+            ItemHoveringUI.onSetupItem -= OnSetupItemHoveringUI;
+        }
+
+        private void OnSetupItemHoveringUI(ItemHoveringUI uiInstance, Item item)
+        {
+            Text.transform.SetParent(uiInstance.LayoutParent);
+            Text.text = $"${item.GetTotalRawValue()}";
+        }
+    }
+}

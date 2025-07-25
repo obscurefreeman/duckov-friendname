@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+        <Reference Include="D:\Tools\Steam\sdk\tools\ContentBuilder\content\Duckov\Duckov_Win\Duckov_Data\Managed\*.dll" />
+    </ItemGroup> 
+</Project>
