@@ -4,6 +4,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-        <Reference Include="D:\Tools\Steam\sdk\tools\ContentBuilder\content\Duckov\Duckov_Win\Duckov_Data\Managed\*.dll" />
+        <Reference Include="Duckov_INSTALL_FOLDER\Duckov_Win\Duckov_Data\Managed\*.dll" />
     </ItemGroup> 
 </Project>
