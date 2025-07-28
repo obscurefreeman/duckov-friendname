@@ -4,6 +4,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-        <Reference Include="E:\Program Files (x86)\Steam\steamapps\common\Escape from Duckov\Duckov_Win\Duckov_Data\Managed\*.dll" />
+        <Reference Include="E:\Program Files (x86)\Steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\*.dll" />
   </ItemGroup> 
 </Project>
