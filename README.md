@@ -27,7 +27,7 @@ info.ini 应包含以下参数:
 info.ini 还可能包含以下参数:
 - publishedFileId （记录本 Mod 在 steam 创意工坊的 id）
 
-*[示例](DisplayItemValue/info.ini)*
+*[示例](DisplayItemValue/ReleaseExample/DisplayItemValue/)*
 
 ## 配置 C# 工程
 
