@@ -17,6 +17,8 @@ ModBehaviour 应继承自 Duckov.Modding.ModBehaviour。Duckov.Modding.ModBehavi
     - info.ini
     - preview.png (正方形的预览图)
 
+[Mod文件夹示例](DisplayItemValue/ReleaseExample/DisplayItemValue/)
+
 ### info.ini
 
 info.ini 应包含以下参数:
@@ -27,7 +29,7 @@ info.ini 应包含以下参数:
 info.ini 还可能包含以下参数:
 - publishedFileId （记录本 Mod 在 steam 创意工坊的 id）
 
-*[示例](DisplayItemValue/ReleaseExample/DisplayItemValue/)*
+
 
 ## 配置 C# 工程
 
