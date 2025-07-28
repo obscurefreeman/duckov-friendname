@@ -43,6 +43,7 @@ namespace DisplayItemValue
         private void OnSetupItemHoveringUI(ItemHoveringUI uiInstance, Item item)
         {
             Text.transform.SetParent(uiInstance.LayoutParent);
+            Text.transform.localScale = Vector3.one;
             Text.text = $"${item.GetTotalRawValue()}";
         }
     }
