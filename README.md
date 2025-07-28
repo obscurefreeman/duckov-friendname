@@ -15,7 +15,7 @@ ModBehaviour 应继承自 Duckov.Modding.ModBehaviour。Duckov.Modding.ModBehavi
 - MyMod (文件夹)
     - MyMod.dll
     - info.ini
-    - preview.png (正方形的预览图)
+    - preview.png (正方形的预览图，建议使用256*256分辨率)
 
 [Mod文件夹示例](DisplayItemValue/ReleaseExample/DisplayItemValue/)
 
@@ -29,6 +29,7 @@ info.ini 应包含以下参数:
 info.ini 还可能包含以下参数:
 - publishedFileId （记录本 Mod 在 steam 创意工坊的 id）
 
+**注意：在上传Steam Workshop的时候，会复写info.ini。info.ini中原有的信息可能会因此丢失。所以不建议在info.ini中存储除以上项目之外的其他信息。**
 
 
 ## 配置 C# 工程
