@@ -17,6 +17,8 @@ ModBehaviour 应继承自 Duckov.Modding.ModBehaviour。Duckov.Modding.ModBehavi
     - info.ini
     - preview.png (正方形的预览图)
 
+[Mod文件夹示例](DisplayItemValue/ReleaseExample/DisplayItemValue/)
+
 ### info.ini
 
 info.ini 应包含以下参数:
@@ -27,13 +29,15 @@ info.ini 应包含以下参数:
 info.ini 还可能包含以下参数:
 - publishedFileId （记录本 Mod 在 steam 创意工坊的 id）
 
+
+
 ## 配置 C# 工程
 
 1. 在电脑上准备好《逃离鸭科夫》本体。
 2. 创建一个 .Net Class Library 工程。
 3. 配置工程参数。
     1. Target Framework
-        - TargetFramework 建议设置为 netstandard2.1。
+        - **TargetFramework 建议设置为 netstandard2.1。**
         - 注意删除TargetFramework不支持的功能，比如`<ImplicitUsings>`
     2. Reference Include
         - 将《逃离鸭科夫》的`\Duckov_Data\Managed\*.dll`添加到引用中。
@@ -45,5 +49,5 @@ info.ini 还可能包含以下参数:
         ```
 3. 完成！现在在你Mod的Namespace中编写一个ModBehaivour的类。构建工程，即可得到你的mod的主要dll。
 
-*具体示例可以参考DisplayItemValue这个工程*
+csproj文件示例：[DisplayItemValue.csproj](DisplayItemValue/DisplayItemValue.csproj)
 
