@@ -15,7 +15,7 @@ ModBehaviour 应继承自 Duckov.Modding.ModBehaviour。Duckov.Modding.ModBehavi
 - MyMod (文件夹)
     - MyMod.dll
     - info.ini
-    - preview.png (正方形的预览图)
+    - preview.png (正方形的预览图，建议使用256*256分辨率)
 
 [Mod文件夹示例](DisplayItemValue/ReleaseExample/DisplayItemValue/)
 
