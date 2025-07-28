@@ -45,5 +45,5 @@ info.ini 还可能包含以下参数:
         ```
 3. 完成！现在在你Mod的Namespace中编写一个ModBehaivour的类。构建工程，即可得到你的mod的主要dll。
 
-*具体示例可以参考DisplayItemValue这个工程*
+*具体示例可以参考[DisplayItemValue.csproj](DisplayItemValue/DisplayItemValue.csproj)*
 
