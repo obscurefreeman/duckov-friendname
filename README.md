@@ -54,4 +54,4 @@ csproj文件示例：[DisplayItemValue.csproj](DisplayItemValue/DisplayItemValue
 
 ## 其他
 
-- 使用 Unity 进行开发时，可以参考 [UnityFiles/manifest.json] 来选择 package。
+- 使用 Unity 进行开发时，可以参考本仓库附带的 [manifest.json文件](UnityFiles/manifest.json) 来选择 package。
