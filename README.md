@@ -2,7 +2,7 @@
 
 ## 工作原理概述
 
-《逃离鸭科夫》的Mod模块会扫描并读取Mods文件夹中的各个子文件夹。通过文件夹中包含的dll文件，info.ini和preview.png在游戏中展示、加载mod。
+《逃离鸭科夫》的Mod模块会扫描并读取 Duckov_Data/Mods 文件夹中的各个子文件夹，以及 Steam 创意工坊已订阅物品的各个文件夹。通过文件夹中包含的dll文件，info.ini和preview.png在游戏中展示、加载mod。
 
 《逃离鸭科夫》会读取info.ini中的name参数，并以此作为namespace尝试加载名为ModBehaviour的类。例如，info.ini 中如果记载`name=MyMod`,则会加载`MyMod.dll`文件中的`MyMod.ModBehaviour`。
 
@@ -10,6 +10,7 @@ ModBehaviour 应继承自 Duckov.Modding.ModBehaviour。Duckov.Modding.ModBehavi
 
 ## Mod文件结构
 
+将准备好的 Mod 文件夹放到《逃离鸭科夫》本体的 Duckov_Data/Mods 中，即可在游戏主界面的 Mods 界面加载该 Mod。
 假设 Mod 的名字为"MyMod"。发布的文件结构应该如下：
 
 - MyMod (文件夹)
@@ -30,7 +31,6 @@ info.ini 还可能包含以下参数:
 - publishedFileId （记录本 Mod 在 steam 创意工坊的 id）
 
 **注意：在上传Steam Workshop的时候，会复写info.ini。info.ini中原有的信息可能会因此丢失。所以不建议在info.ini中存储除以上项目之外的其他信息。**
-
 
 ## 配置 C# 工程
 
