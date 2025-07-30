@@ -52,3 +52,6 @@ info.ini 还可能包含以下参数:
 
 csproj文件示例：[DisplayItemValue.csproj](DisplayItemValue/DisplayItemValue.csproj)
 
+## 其他
+
+- 使用 Unity 进行开发时，可以参考 [UnityFiles/manifest.json] 来选择 package。
