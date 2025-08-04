@@ -54,4 +54,17 @@ csproj文件示例：[DisplayItemValue.csproj](DisplayItemValue/DisplayItemValue
 
 ## 其他
 
-- 使用 Unity 进行开发时，可以参考本仓库附带的 [manifest.json文件](UnityFiles/manifest.json) 来选择 package。
+### Unity Package
+使用 Unity 进行开发时，可以参考本仓库附带的 [manifest.json文件](UnityFiles/manifest.json) 来选择 package。
+
+### 自定义游戏物品
+- 可调用 `ItemStatsSystem.ItemAssetsCollection.AddDynamicEntry(Item prefab)` 添加自定义物品
+- 可调用`ItemStatsSystem.ItemAssetsCollection.RemoveDynamicEntry(Item prefab)`将该mod物品移除
+- 自定义物品的prefab上需要配置好TypeID。避免与游戏本体和其他MOD冲突。
+- 进入游戏时如果未加载对应MOD，存档中的自定义物品会直接消失。
+
+### 本地化
+- 可调用 `SodaCraft.Localizations.LocalizationManager.SetOverrideText(string key, string value)` 来覆盖显示本地化文本。
+- 可借助 `SodaCraft.Localizations.LocalizationManager.OnSetLanguage:System.Action<SystemLanguage>` 事件来处理语言切换时的逻辑
+
+
