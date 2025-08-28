@@ -2,8 +2,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <!-- This should be the folder that contains Duckov.exe -->
+    <DuckovPath>Path/To/Your/Duckov/</DuckovPath>
   </PropertyGroup>
   <ItemGroup>
-        <Reference Include="D:\Tools\Steam\sdk\tools\ContentBuilder\content\Duckov\Duckov_Win\Duckov_Data\Managed\*.dll" />
+        <Reference Include="$(DuckovPath)\Duckov_Data\Managed\TeamSoda.*" />
+        <Reference Include="$(DuckovPath)\Duckov_Data\Managed\ItemStatsSystem.dll" />
+        <Reference Include="$(DuckovPath)\Duckov_Data\Managed\Unity*" />
   </ItemGroup> 
 </Project>
