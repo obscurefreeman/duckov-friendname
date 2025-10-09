@@ -42,9 +42,17 @@ namespace DisplayItemValue
 
         private void OnSetupItemHoveringUI(ItemHoveringUI uiInstance, Item item)
         {
+            if (item == null)
+            {
+                Text.gameObject.SetActive(false);
+                return;
+            }
+            
+            Text.gameObject.SetActive(true);
             Text.transform.SetParent(uiInstance.LayoutParent);
             Text.transform.localScale = Vector3.one;
-            Text.text = $"${item.GetTotalRawValue()}";
+            Text.text = $"${item.GetTotalRawValue() / 2}";
+            Text.fontSize = 20f;
         }
     }
 }
