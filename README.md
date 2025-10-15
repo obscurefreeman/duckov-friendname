@@ -1,6 +1,6 @@
 # Duckov Modding 示例 (Duckov Modding Example)
 
-*This is an example project of Duckov Modding. I didn't have enough time to translate this document, so it's currently Chinese only. I'll apprecieate it if anyone wants to help with the translation work!*
+*This is an example project for modding Escape From Duckov. I didn't have enough time to translate this document, so it's currently Chinese only. I'll apprecieate it if anyone wants to help with the translation work!*
 
 ## 工作原理概述
 
