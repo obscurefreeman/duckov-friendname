@@ -70,9 +70,11 @@ info.ini may also contain the following parameters:
       - 例：
 
       ```
-      <ItemGroup>
-          <Reference Include="E:\Program Files (x86)\Steam\steamapps\common\Escape from Duckov\Duckov_Win\Duckov_Data\Managed\*.dll" />
-      </ItemGroup>
+        <ItemGroup>
+          <Reference Include="$(DuckovPath)\Duckov_Data\Managed\TeamSoda.*" />
+          <Reference Include="$(DuckovPath)\Duckov_Data\Managed\ItemStatsSystem.dll" />
+          <Reference Include="$(DuckovPath)\Duckov_Data\Managed\Unity*" />
+        </ItemGroup> 
       ```
 
 4. 完成！现在在你 Mod 的 Namespace 中编写一个 ModBehaivour 的类。构建工程，即可得到你的 mod 的主要 dll。
@@ -91,8 +93,10 @@ info.ini may also contain the following parameters:
 
       ```
       <ItemGroup>
-          <Reference Include="E:\Program Files (x86)\Steam\steamapps\common\Escape from Duckov\Duckov_Win\Duckov_Data\Managed\*.dll" />
-      </ItemGroup>
+        <Reference Include="$(DuckovPath)\Duckov_Data\Managed\TeamSoda.*" />
+        <Reference Include="$(DuckovPath)\Duckov_Data\Managed\ItemStatsSystem.dll" />
+        <Reference Include="$(DuckovPath)\Duckov_Data\Managed\Unity*" />
+      </ItemGroup> 
       ```
 
 4. Done! Now write a ModBehaviour class in your Mod's Namespace. Build the project to get your mod's main dll.
