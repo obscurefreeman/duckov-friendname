@@ -77,6 +77,8 @@ info.ini may also contain the following parameters:
 
 4. 完成！现在在你 Mod 的 Namespace 中编写一个 ModBehaivour 的类。构建工程，即可得到你的 mod 的主要 dll。
 
+### English Translation: 
+
 1. Have Escape From Duckov installed on your computer.
 2. Create a .NET Class Library project.
 3. Configure project parameters.
