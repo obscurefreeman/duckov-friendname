@@ -131,7 +131,7 @@ When developing with Unity, you can refer to the [manifest.json file](UnityFiles
 - Call `SodaCraft.Localizations.LocalizationManager.SetOverrideText(string key, string value)` to override displayed localization text.
 - Use the `SodaCraft.Localizations.LocalizationManager.OnSetLanguage:System.Action<SystemLanguage>` event to handle logic when switching languages
 
-## 鸭科夫社区准则
+## 鸭科夫社区准则 / Duckov Community Rules
 
 为了鸭科夫社区的长期健康与和谐发展，我们需要共同维护良好的创作环境。 因此，我们希望大家遵守以下规则：
 1.禁止违反开发组以及 Steam 平台所在地区法律的内容，包括但不限于涉及政治、儿童色情、宣扬暴力恐怖等内容。
@@ -140,4 +140,13 @@ When developing with Unity, you can refer to the [manifest.json file](UnityFiles
 4.禁止利用 Mod 引导至广告、募捐等商业或非官方性质的外部链接，或引导他人付费的行为。
 5.使用AI内容的 Mod 需要标注。
 对于在Steam创意工坊发布的 Mod，如果违反上述规则，我们可能会在不事先通知的情况下直接删除，并可能封禁相关创作者的权限。
+
+To aid the long-term development of the Duckov community, we ask everyone to contribute to a positive creative environment. Please adhere to the following rules:
+1.Content that violates the laws of the regions where the developer team and the Steam platform operate is strictly prohibited, including but not limited to content involving politics, child sexual exploitation, or the promotion of violence or terrorism.
+2.Content that severely insults characters, distorts the story, or aims to cause discomfort, conflict, or controversy in the player community is prohibited. This also includes content related to current events or real-life individuals that may trigger real-world disputes.
+3.Unauthorized use of copyrighted game assets or other third-party materials is prohibited.
+4.Mods must not be used to direct players to advertisements, fundraising, payment requests, or other commercial or unofficial external links.
+5.Mods containing AI-generated content must be clearly labeled.
+For mods published on Steam Workshop, any violations of the above rules may result in removal without prior notice and may lead to suspension of the creator’s permissions.
+
 
