@@ -130,3 +130,14 @@ When developing with Unity, you can refer to the [manifest.json file](UnityFiles
 
 - Call `SodaCraft.Localizations.LocalizationManager.SetOverrideText(string key, string value)` to override displayed localization text.
 - Use the `SodaCraft.Localizations.LocalizationManager.OnSetLanguage:System.Action<SystemLanguage>` event to handle logic when switching languages
+
+## 鸭科夫社区准则
+
+为了鸭科夫社区的长期健康与和谐发展，我们需要共同维护良好的创作环境。 因此，我们希望大家遵守以下规则：
+1.禁止违反开发组以及 Steam 平台所在地区法律的内容，包括但不限于涉及政治、儿童色情、宣扬暴力恐怖等内容。
+2.禁止严重侮辱角色或者扭曲剧情、意图在玩家社群内容引起反感和制造对立的内容，或者涉及到热门时事与现实人物等容易引发现实争议的内容。
+3.禁止未经授权，使用受版权保护的游戏资源或其他第三方素材的内容。
+4.禁止利用 Mod 引导至广告、募捐等商业或非官方性质的外部链接，或引导他人付费的行为。
+5.使用AI内容的 Mod 需要标注。
+对于在Steam创意工坊发布的 Mod，如果违反上述规则，我们可能会在不事先通知的情况下直接删除，并可能封禁相关创作者的权限。
+
