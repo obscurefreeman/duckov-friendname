@@ -27,7 +27,7 @@ Assuming the Mod's name is "MyMod", the published file structure should be as fo
 - MyMod (文件夹 / Folder)
   - MyMod.dll
   - info.ini
-  - preview.png (正方形的预览图，建议使用 256*256 分辨率 / Square preview image, recommended resolution 256*256)
+  - preview.png (正方形的预览图，建议使用 `256*256` 分辨率 / Square preview image, recommended resolution `256*256`)
 
 [Mod 文件夹示例 / Mod Folder Example](DisplayItemValue/ReleaseExample/DisplayItemValue/)
 
