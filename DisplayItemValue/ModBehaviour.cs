@@ -1,4 +1,5 @@
-﻿using Duckov.UI;
+﻿using System;
+using Duckov.UI;
 using Duckov.Utilities;
 using ItemStatsSystem;
 using TMPro;
@@ -34,10 +35,17 @@ namespace DisplayItemValue
         void OnEnable()
         {
             ItemHoveringUI.onSetupItem += OnSetupItemHoveringUI;
+            ItemHoveringUI.onSetupMeta += OnSetupMeta;
         }
         void OnDisable()
         {
             ItemHoveringUI.onSetupItem -= OnSetupItemHoveringUI;
+            ItemHoveringUI.onSetupMeta -= OnSetupMeta;
+        }
+
+        private void OnSetupMeta(ItemHoveringUI uI, ItemMetaData data)
+        {
+            Text.gameObject.SetActive(false);
         }
 
         private void OnSetupItemHoveringUI(ItemHoveringUI uiInstance, Item item)
