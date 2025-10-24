@@ -4,7 +4,7 @@ _This is an example project for modding Escape From Duckov._
 
 中文 | [English](README_EN.md)
 
-[Notable APIs](Documents/NotableAPIs.md)
+[值得注意的API](Documents/NotableAPIs.md)
 
 ## 工作原理概述 / Overview
 
