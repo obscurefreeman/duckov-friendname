@@ -1,66 +1,61 @@
 ﻿using System;
+using System.Collections.Generic;
 using Duckov.UI;
-using Duckov.Utilities;
-using ItemStatsSystem;
+using HarmonyLib;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using Steamworks;
+using System.Reflection;
+using Duckov.Modding;
 
-namespace DisplayItemValue
+namespace OFDuckovFriendname
 {
-
     public class ModBehaviour : Duckov.Modding.ModBehaviour
     {
-        TextMeshProUGUI _text = null;
-        TextMeshProUGUI Text
-        {
-            get
-            {
-                if (_text == null)
-                {
-                    _text = Instantiate(GameplayDataSettings.UIStyle.TemplateTextUGUI);
-                }
-                return _text;
-            }
-        }
         void Awake()
         {
-            Debug.Log("DisplayItemValue Loaded!!!");
+            Debug.Log("OFDuckovFriendname ModBehaviour: Awake called.");
         }
-        void OnDestroy()
-        {
-            if (_text != null)
-                Destroy(_text);
-        }
+
         void OnEnable()
         {
-            ItemHoveringUI.onSetupItem += OnSetupItemHoveringUI;
-            ItemHoveringUI.onSetupMeta += OnSetupMeta;
+            Debug.Log("OFDuckovFriendname ModBehaviour: OnEnable called.");
         }
+
         void OnDisable()
         {
-            ItemHoveringUI.onSetupItem -= OnSetupItemHoveringUI;
-            ItemHoveringUI.onSetupMeta -= OnSetupMeta;
+            Debug.Log("OFDuckovFriendname ModBehaviour: OnDisable called.");
         }
 
-        private void OnSetupMeta(ItemHoveringUI uI, ItemMetaData data)
+        void OnDestroy()
         {
-            Text.gameObject.SetActive(false);
+            Debug.Log("OFDuckovFriendname ModBehaviour: OnDestroy called.");
         }
+    }
 
-        private void OnSetupItemHoveringUI(ItemHoveringUI uiInstance, Item item)
+    [HarmonyPatch(typeof(HealthBar))]
+    public static class CharacterNameDisplay
+    {
+        [HarmonyPrefix]
+        [HarmonyPatch("RefreshCharacterIcon")]
+        public static bool RefreshCharacterIconPrefix(HealthBar __instance)
         {
-            if (item == null)
+            if (!__instance.target)
             {
-                Text.gameObject.SetActive(false);
-                return;
+                return true;
             }
-            
-            Text.gameObject.SetActive(true);
-            Text.transform.SetParent(uiInstance.LayoutParent);
-            Text.transform.localScale = Vector3.one;
-            Text.text = $"${item.GetTotalRawValue() / 2}";
-            Text.fontSize = 20f;
+            CharacterMainControl characterMainControl = __instance.target.TryGetCharacter();
+            if (!characterMainControl)
+            {
+                return true;
+            }
+            CharacterRandomPreset characterPreset = characterMainControl.characterPreset;
+            if (!characterPreset)
+            {
+                return true;
+            }
+            characterPreset.showName = !characterMainControl.IsMainCharacter;
+            return true;
         }
     }
 }
