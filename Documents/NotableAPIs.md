@@ -80,7 +80,7 @@ public void SetTeam(Teams _team)
 
 ### Screen Bottom Dialogue
 
-The main subtitle function is previously only called by the events listeners. I will change it to public so you can call it freely.
+The main subtitle function is previously only called by the events listeners. I will change it to public after release 1.0.29 so you can call it freely.
 But be careful with it since it's an async function, and instances of the calls will interfere themselves.
 
 ```
