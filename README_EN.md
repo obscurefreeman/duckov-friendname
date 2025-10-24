@@ -4,6 +4,8 @@ _This is an example project for modding Escape From Duckov._
 
 [中文](README.md) | English
 
+[Notable APIs](Documents/NotableAPIs.md)
+
 ## Overview
 
 The modding system of Escape From Duckov scans and reads the subfolders in the Duckov_Data/Mods folder, as well as the folders of subscribed items in the Steam Workshop. Mods are displayed and loaded in the game through the `dll` files, `info.ini`, and `preview.png` contained in these folders.

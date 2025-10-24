@@ -4,6 +4,8 @@ _This is an example project for modding Escape From Duckov._
 
 中文 | [English](README_EN.md)
 
+[Notable APIs](Documents/NotableAPIs.md)
+
 ## 工作原理概述 / Overview
 
 《逃离鸭科夫》的 Mod 模块会扫描并读取 Duckov_Data/Mods 文件夹中的各个子文件夹，以及 Steam 创意工坊已订阅物品的各个文件夹。通过文件夹中包含的 dll 文件，info.ini 和 preview.png 在游戏中展示、加载 mod。
