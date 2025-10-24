@@ -1,10 +1,10 @@
-# Notable APIs and Implementation Details
+# 值得注意的API和实现细节
 
-## Items Related
+## 物品相关
 
-### Item Generation
+### 物品生成
 
-Use ItemAssetsCollection class to generate item instances.
+使用 ItemAssetsCollection 类里的函数来生成物品
 
 ```
 //notable functions
@@ -16,10 +16,10 @@ public static Item InstantiateSync(int typeID)
 using ItemStatsSystem;
 
 ...
-//generate a glick (Item #254)
+//生成一个 a glick (Item #254)
 Item glick = ItemAssetsCollection.InstantiateAsync(254);
 
-//Do something it with it. for example send it to player:
+//对它做一些事，比如把它送给玩家
 ItemUtilities.SendToPlayer(glick);
 ...
 
@@ -27,8 +27,8 @@ ItemUtilities.SendToPlayer(glick);
 
 ### Item Utilities
 
-You can call functions in ItemUtilities to send item to players' storage.
-And do other stuff.
+你可以使用 Item Utilities 类里的一些函数来操作物品。比如送到玩家身上之类的。以及其他一些操作。
+
 
 ```
 //notable functions
@@ -48,40 +48,40 @@ public static bool TryPlug(this Item main, Item part, bool emptyOnly = false, In
 
 ### Item
 
-Item class is defined in ItemStatsSystem.
+物品类定义在 ItemStatsSystem 命名空间下。
 
 
 ```
 //notable function definitions
 
-//make the item loose. unplug the item, or move it out of the inventory.
+//使item脱离当前的东西，比如从槽位中移除，从 Inventory 中移除等。
 public void Detach()
 
 
 ```
 
-## Character Related
+## 角色相关
 
 ### CharacterMainControl
-CharacterMainControl is the core of a character.
+CharacterMainControl 是所有角色的核心组件。
 
 ```
 //notable function definitions
 
-//set the team of a character
+//设置角色的阵营
 public void SetTeam(Teams _team)
 ```
 
-### Enemy Generation
+### 敌人生成
 
 (to be written)
 
-## Dialogues
+## 对话相关
 
-### Screen Bottom Dialogue
+### 大对话
 
-The main subtitle function is previously only called by the events listeners. I will change it to public so you can call it freely.
-But be careful with it since it's an async function, and instances of the calls will interfere themselves.
+DoSubtitle这个函数原来是私有的，我把它改成了公有，这样大家可以调用它来展示对话。
+因为是异步函数，所以需要小心一些，因为多次调用会影响彼此。
 
 ```
 //function in DialogueUI
@@ -98,8 +98,7 @@ DialogueUI.instance.DoSubtitle(content);
 ...
 
 ```
-### Dialogue Bubble
-Use this to do the bubble.
+### 气泡对话
 
 ```
 //class
