@@ -35,10 +35,17 @@ namespace OFDisplayItemRarity
         void OnEnable()
         {
             ItemHoveringUI.onSetupItem += OnSetupItemHoveringUI;
+            ItemHoveringUI.onSetupMeta += OnSetupMeta;
         }
         void OnDisable()
         {
             ItemHoveringUI.onSetupItem -= OnSetupItemHoveringUI;
+            ItemHoveringUI.onSetupMeta -= OnSetupMeta;
+        }
+
+        private void OnSetupMeta(ItemHoveringUI uI, ItemMetaData data)
+        {
+            Text.gameObject.SetActive(false);
         }
 
         private void OnSetupItemHoveringUI(ItemHoveringUI uiInstance, Item item)
@@ -162,40 +169,40 @@ namespace OFDisplayItemRarity
                 case SystemLanguage.Russian:
                     switch (quality)
                     {
-                        case 0: return "Мусор";
-                        case 1: return "Обычный";
-                        case 2: return "Отличный";
-                        case 3: return "Редкий";
-                        case 4: return "Эпический";
+                        case 0: return "Плохое";
+                        case 1: return "Обычное";
+                        case 2: return "Хорошее";
+                        case 3: return "Редкое";
+                        case 4: return "Эпическое";
                         case 5: return "Легендарный";
-                        case 6: return "Мифический";
-                        default: return "Мифический+";
+                        case 6: return "Бессмертное";
+                        default: return "Секретное";
                     }
                 case SystemLanguage.English:
                     switch (quality)
                     {
-                        case 0: return "Trash";
+                        case 0: return "Crude";
                         case 1: return "Common";
                         case 2: return "Fine";
                         case 3: return "Rare";
                         case 4: return "Epic";
                         case 5: return "Legendary";
-                        case 6: return "Mythic";
-                        default: return "Mythic+";
+                        case 6: return "Immortal";
+                        default: return "Classified";
                     }
                 case SystemLanguage.ChineseSimplified:
                 case SystemLanguage.ChineseTraditional:
                 default:
                     switch (quality)
                     {
-                        case 0: return "垃圾";
+                        case 0: return "粗糙";
                         case 1: return "普通";
                         case 2: return "精良";
                         case 3: return "稀有";
                         case 4: return "史诗";
                         case 5: return "传说";
-                        case 6: return "神话";
-                        default: return "神话+";
+                        case 6: return "不朽";
+                        default: return "机密";
                     }
             }
         }
